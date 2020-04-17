@@ -1,4 +1,5 @@
 def find_item_by_name_in_collection(name, collection)
+  
   collection.each do |object|
     
     if object[:item] === name
@@ -15,12 +16,11 @@ def consolidate_cart(cart)
   
   new_cart.each do |object|
     object[:count] = new_cart.count(object)
-    puts object
     
   end
-  
-  
-
+  new_cart = new_cart.uniq
+  puts new_cart
+  new_cart
 end
 
 
